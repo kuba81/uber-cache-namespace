@@ -1,0 +1,36 @@
+{
+  "author": "Kuba Stawiarski <kuba.stawiarski@gmail.com>",
+  "name": "uber-cache-namespace",
+  "description": "Wrapper for uber-cache engines providing namespaces",
+  "version": "0.0.0",
+  "tags": [
+    "cache"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kuba81/uber-cache-namespace"
+  },
+  "main": "uber-cache-namespace.js",
+  "scripts": {
+    "lint": "jshint . --reporter=./node_modules/jshint-full-path/index.js",
+    "pretest": "npm run-script lint",
+    "test": "istanbul cover ./node_modules/.bin/_mocha -- -R spec -r should",
+    "posttest": "istanbul check-coverage && rm -rf coverage"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "devDependencies": {
+    "async": "^0.9.0",
+    "istanbul": "^0.3.5",
+    "jshint": "^2.5.11",
+    "jshint-full-path": "^1.1.1",
+    "mocha": "^2.1.0",
+    "should": "^6.0.1",
+    "stream-assert": "^2.0.2",
+    "uber-cache": "^2.1.0"
+  }
+}
